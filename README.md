@@ -93,7 +93,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/preetham-portfolio.git
+git clone https://github.com/pdevulapally/Preetham-Devulapally.git
 
 # Navigate to project directory
 cd preetham-portfolio
@@ -321,6 +321,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **⭐ Star this repository if you found it helpful!**
 
-Made with ❤️ by [Preetham Devulapally](https://github.com/yourusername)
+Made with ❤️ by [Preetham Devulapally](https://github.com/pdevulapally)
 
 </div>
