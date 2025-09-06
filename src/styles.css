@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 1rem;
+}
+
+html, body, #root { height: 100%; }
+
+/* Fancy gradient ring on focus */
+.focus-ring {
+  @apply outline-none ring-2 ring-brand-ring/60;
+}
+
+/* Glassy card */
+.card {
+  @apply rounded-2xl shadow-soft border border-white/10 bg-white/70 dark:bg-white/5 backdrop-blur;
+}
+
+/* subtle shimmering CTA */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.3) 20%, transparent 40%);
+  transform: translateX(-120%);
+  transition: transform .8s ease;
+}
+.btn-shine:hover::after { transform: translateX(120%); }
+
+
+/* Subtle interactive depth */
+.card { transform: translateZ(0); }
+.card:focus-within { box-shadow: 0 10px 30px rgba(0,0,0,.12); }
+
+/* Reduce harsh autofill colors (Chrome) */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: inherit;
+  transition: background-color 100000s ease-in-out 0s;
+}
+
+/* Make timeline dots pop subtly on focus */
+article:focus-within .shadow-\[0_0_0_3px\] { box-shadow: 0 0 0 3px rgba(255,255,255,.6); }
+
+.bg-gradient-to-r.text-white { filter: saturate(1.05); }
+
+/* Premium shine for solid CTA */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shine__gloss {
+  position: absolute;
+  inset: 0;
+  transform: translateX(-120%);
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.35) 20%, transparent 40%);
+  transition: transform .8s ease;
+}
+.btn-shine:hover .btn-shine__gloss {
+  transform: translateX(120%);
+}
+
